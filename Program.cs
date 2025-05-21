@@ -14,7 +14,7 @@ static class Program
 
         while (true)
         {
-            string Readline = Console.ReadLine();
+            string? Readline = Console.ReadLine();
             switch (Readline)
             {
                 case "!!Shutdown":
@@ -32,7 +32,7 @@ static class Program
 
                 case "!!StoreData":
                     Console.WriteLine("Submit DataPath");
-                    string DataPath = Console.ReadLine();
+                    string? DataPath = Console.ReadLine();
                     MemoryHandler.StoreData(DataPath);
                     break;
 

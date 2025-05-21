@@ -24,7 +24,7 @@ namespace ProtoZeke
             {
                 string SavedMemory = Path.Combine(Directory.GetCurrentDirectory(), "Memory\\");
                 Console.WriteLine("Assign New File Name");
-                string FileName = Console.ReadLine();
+                string? FileName = Console.ReadLine();
                 Console.WriteLine($"New File name: {FileName} \nTranferring Data to {SavedMemory}...");
                 File.Copy(input, SavedMemory + FileName,true);
             }
@@ -38,7 +38,7 @@ namespace ProtoZeke
         public static string QueryData()
         {
             Console.WriteLine("Designate Data To Be Read");
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             string SavedMemory = Path.Combine(Directory.GetCurrentDirectory(), "Memory\\");
             string path = (SavedMemory + $"\\{input}");
             return path;
